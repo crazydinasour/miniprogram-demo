@@ -1,7 +1,7 @@
 // pages/home/home.js
-import {Theme} from "../../models/theme";
+import {Theme} from "../../model/theme";
 import {config} from "../../config";
-import {Banner} from "../../models/banner";
+import {Banner} from "../../model/banner";
 
 Page({
 
