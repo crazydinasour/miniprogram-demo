@@ -11,7 +11,9 @@ Page({
     themeA: null,
     bannerB: null,
     gridC: [],
-    activityD: null
+    activityD: null,
+    themeE: null,
+    bannerG: null
   },
 
 
@@ -23,8 +25,18 @@ Page({
    const theme = new Theme()
    await theme.getThemes()
 
-   const themeA = theme.getHomeLocationA()
-   const themeE = theme.getHomeLocationE()
+   const themeA = await theme.getHomeLocationA()
+   const themeE = await  theme.getHomeLocationE()
+   let themeESpu = []
+   if(themeE.online)  {
+       const data = await Theme.getHomeLocationESpu()
+       if(data){
+           themeESpu = data.spu_list.slice(0,8)
+       }
+   }
+   // const themeESpuList = await Theme.getHomeLocationESpu()
+   const themeF = await theme.getHomeLocationF()
+   const bannerG = await Banner.getHomeLocationG()
 
    const bannerB = await Banner.getHomeLocationB()
 
@@ -37,7 +49,10 @@ Page({
      themeE,
      bannerB,
      gridC,
-     activityD
+     activityD,
+     themeESpuList,
+     themeF,
+     bannerG
    })
 
  },

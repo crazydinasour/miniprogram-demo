@@ -1,3 +1,6 @@
+import {Config} from '../config/config.js'
+import {promisic} from './util.js'
+
 class Http{
     static async request({
         url,
@@ -5,11 +8,11 @@ class Http{
         method = 'GET'
     }){
         await promisic(wx.request({
-            url: `${config.apiBaseUrl}${url}`,
+            url: `${Config.apiBaseUrl}${url}`,
             data,
             method,
             header:{
-                appkey:config.appkey
+                appkey: Config.appkey
             }
         }))
     }

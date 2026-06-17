@@ -1,0 +1,43 @@
+.title{
+    width:692rpx;
+    height:90rpx;
+}
+
+.scroll-view{
+    margin-top: 20rpx;
+    display: flex;
+    flex-direction: row;
+}
+
+.spu-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 60rpxg;
+}
+.inner{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.spu-img{
+    width:160rpx;
+    height:160rpx;
+}
+
+.price-unit{
+    font-size:24rpx !important;
+    color: cadetblue !important;
+}
+
+.price-value{
+    font-size:26rpx;
+    color: cadetblue !important;
+}
+
+.spu-text{
+    font-size:20rpx;
+    color: #666666 !important;
+    margin-top: 20rpx;
+}

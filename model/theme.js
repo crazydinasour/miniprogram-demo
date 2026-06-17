@@ -1,5 +1,5 @@
 import {Http} from '../utils/http.js'
-import {Config} from '../utils/config.js'
+import {Config} from '../config/config.js'
 
 class Theme{
     static  locationA = 't-1'
@@ -24,6 +24,19 @@ class Theme{
 
     async getHomeLocationE(){
         return this.themes.find(t => t.name === Theme.locationE)
+    }
+
+    async getHomeLocationF(){
+        return this.themes.find(t => t.name === Theme.locationF)
+    }
+
+    static async getHomeLocationESpu(){
+        return Theme.getThemeSpuByName(Theme.locationE)
+    }
+    static async getThemeSpuByName(name){
+        return await Http.request({
+            url:''
+        })
     }
 }
 

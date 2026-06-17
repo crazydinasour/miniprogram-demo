@@ -12,7 +12,8 @@
   "sitemapLocation": "sitemap.json",
   "lazyCodeLoading": "requiredComponents",
   "usingComponents": {
-    "l-grid": "miniprogram-1/node_modules/lin-ui/dist/grid/index",
-    "l-grid-item":"miniprogram-1/node_modules/lin-ui/dist/grid-item/index"
+    "l-grid": "lin-ui/grid/index",
+    "l-grid-item":"lin-ui/grid-item/index",
+    "l-price": "lin-ui/price/index"
   }
 }
