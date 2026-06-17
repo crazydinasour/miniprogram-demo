@@ -1,8 +1,11 @@
-import Http from '../utils/http.js'
+import {Http} from '../utils/http.js'
 class Category {
-    async getCategory() {
+    static async getGridCategory () {
         return await Http.request({
-            url: '/category/all'
+            url:''
         })
     }
+}
+export {
+    Category
 }

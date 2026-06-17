@@ -1,4 +1,4 @@
-import Http from '../utils/http.js'
+import {Http} from '../utils/http.js'
 
 class Banner{
     static locationB = 'b-1'
