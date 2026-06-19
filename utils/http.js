@@ -1,23 +1,34 @@
-import {Config} from '../config/config.js'
+import {config} from '../config/config.js'
 import {promisic} from './util.js'
+import {getMockData} from '../mock/index.js'
 
-class Http{
+const delay = ms => new Promise(resolve => setTimeout(resolve, ms))
+
+class Http {
     static async request({
         url,
         data,
         method = 'GET'
-    }){
-        await promisic(wx.request({
-            url: `${Config.apiBaseUrl}${url}`,
+    }) {
+        if (config.useMock) {
+            if (config.mockDelay > 0) {
+                await delay(config.mockDelay)
+            }
+            return getMockData(url, data, method)
+        }
+
+        const res = await promisic(wx.request)({
+            url: `${config.apiBaseUrl}${url}`,
             data,
             method,
-            header:{
-                appkey: Config.appkey
+            header: {
+                appkey: config.appkey
             }
-        }))
+        })
+        return res.data
     }
 }
 
-export{
+export {
     Http
 }

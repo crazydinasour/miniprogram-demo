@@ -3,7 +3,7 @@ class Activity {
     static locationD = 'a-2'
     static async getAHomeLocationD() {
         return await Http.request({
-            url:''
+            url: `/activity/name/${Activity.locationD}`
         })
     }
 }

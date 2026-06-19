@@ -5,20 +5,21 @@
 
 .scroll-view{
     margin-top: 20rpx;
+    width: 100%;
+}
+
+.inner{
     display: flex;
     flex-direction: row;
+    align-items: flex-start;
 }
 
 .spu-container{
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-right: 60rpxg;
-}
-.inner{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-shrink: 0;
+    margin-right: 60rpx;
 }
 
 .spu-img{

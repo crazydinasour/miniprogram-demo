@@ -1,7 +1,7 @@
 <wxs src="../../miniprogram_npm/lin-ui/filter/string.wxs" module="s"></wxs>
 <view class="container l-class">
-    <image class="img" src="{{theme.title_img}}"></image>
-    <scroll-view scroll-x class="scroll-view">
+    <image class="title" src="{{theme.title_img}}"></image>
+    <scroll-view scroll-x enable-flex class="scroll-view">
         <view class="inner">
             <block wx:for="{{spuList}}">
                 <view class="spu-container">

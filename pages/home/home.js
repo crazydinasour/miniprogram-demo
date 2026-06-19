@@ -1,6 +1,5 @@
 // pages/home/home.js
 import {Theme} from "../../model/theme";
-import {config} from "../../config";
 import {Banner} from "../../model/banner";
 import {Category} from "../../model/category";
 import {Activity} from "../../model/activity";
@@ -10,9 +9,11 @@ Page({
   data: {
     themeA: null,
     bannerB: null,
-    gridC: [],
+    grid: [],
     activityD: null,
     themeE: null,
+    themeESpu: [],
+    themeF: null,
     bannerG: null
   },
 
@@ -31,7 +32,7 @@ Page({
    if(themeE.online)  {
        const data = await Theme.getHomeLocationESpu()
        if(data){
-           themeESpu = data.spu_list.slice(0,8)
+           themeESpu = data.spu_list.slice(0, 6)
        }
    }
    // const themeESpuList = await Theme.getHomeLocationESpu()
@@ -40,7 +41,7 @@ Page({
 
    const bannerB = await Banner.getHomeLocationB()
 
-   const gridC = await Category.getGridCategory()
+   const grid = await Category.getGridCategory()
 
    const activityD = await Activity.getAHomeLocationD()
 
@@ -48,9 +49,9 @@ Page({
      themeA,
      themeE,
      bannerB,
-     gridC,
+     grid,
      activityD,
-     themeESpuList,
+     themeESpu,
      themeF,
      bannerG
    })

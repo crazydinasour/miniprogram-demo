@@ -24,3 +24,9 @@
     width: 60rpx;
     height: 60rpx;
 }
+
+.title{
+    margin-top: 8rpx;
+    font-size: 24rpx;
+    color: #333;
+}

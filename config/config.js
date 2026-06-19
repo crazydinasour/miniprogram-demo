@@ -1,7 +1,10 @@
 const config = {
-    appkey:'',
-    apiBaseUrl:''
+    appkey: '',
+    apiBaseUrl: '',
+    useMock: true,
+    mockDelay: 300
 }
+
 export {
     config
 }

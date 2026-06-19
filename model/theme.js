@@ -1,5 +1,4 @@
 import {Http} from '../utils/http.js'
-import {Config} from '../config/config.js'
 
 class Theme{
     static  locationA = 't-1'
@@ -9,7 +8,7 @@ class Theme{
 
     themes = []
     async getThemes(){
-        const names = '{Theme.locationA},{Theme.locationE},{Theme.locationF},{Theme.locationH}'
+        const names = `${Theme.locationA},${Theme.locationE},${Theme.locationF},${Theme.locationH}`
         this.themes = await Http.request({
             url: '/theme/by/name',
             data:{
@@ -35,7 +34,7 @@ class Theme{
     }
     static async getThemeSpuByName(name){
         return await Http.request({
-            url:''
+            url: `/theme/name/${name}/spu`
         })
     }
 }
