@@ -57,6 +57,12 @@ Page({
    })
 
  },
+
+ onCategoryTap(e) {
+   const { item } = e.detail
+   wx.switchTab({ url: '/pages/category/category' })
+ },
+
   onReady() {
 
   },
