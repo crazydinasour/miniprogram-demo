@@ -6,6 +6,7 @@ import {
     activityD,
     themeESpu
 } from './home.js'
+import { cartFormConfig } from './cart.js'
 
 function getMockData(url, data = {}) {
     if (url === '/theme/by/name') {
@@ -34,6 +35,10 @@ function getMockData(url, data = {}) {
 
     if (url === '/activity/name/a-2') {
         return activityD
+    }
+
+    if (url === '/cart/form/config') {
+        return cartFormConfig
     }
 
     console.warn('[Mock] 未匹配的接口:', url, data)
